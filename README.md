@@ -138,3 +138,10 @@ still be compilable with cmake and make./
 ## How to write a README
 A well written README file can enhance your project and portfolio.  Develop your abilities to create professional README files by completing [this free course](https://www.udacity.com/course/writing-readmes--ud777).
 
+## Reflection
+Actually, the most difficult part of this project is: how to make car change lane smoothly. Lucky, "Project Walkthrough" video provided the detail process. We take the end of previous path, and some points in front of us, use spline library to generate a smooth path. 
+
+The path planning part is easy. 
+
+- We don't want any collisions, so we only change lane when we make sure there is no collision happens. For example, in target lane, the closest car which is in front of us should be 30 meters away, and the closest car which is behind of us should be 15 meters away. 
+- If our speed is slow, then we'll try to change lane. We'll find a lane which is empty or at least more empty than the current lane. Then we move to that lane and we'll get a faster speed.
